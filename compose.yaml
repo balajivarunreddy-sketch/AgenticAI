@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data:/app/data
+      - ./workspace_data:/app/workspace_data
